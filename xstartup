@@ -10,7 +10,7 @@ XFCE_PANEL_MIGRATE_DEFAULT=true startxfce4 &
 #    LOADIMAGE('$(find $INPUT_DIR -name "*.nii.gz")')
 #END.
 #EOF
-cp fib.gz /tmp/data.fib.gz
+cp /input/fib.gz /tmp/data.fib.gz
 vglrun dsi_studio /tmp/data.fib.gz &
 pid=$!
 echo $pid > /pid
