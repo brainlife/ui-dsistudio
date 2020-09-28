@@ -1,5 +1,4 @@
-# docker-mricrogl
+# ui-dsistudio
 
-MRIcroGL viewer for BrainLife
+dsi_studio container for brainlife to visuzlize fib.gz datatype.
 
-mricrogl_linux from //www.nitrc.org/frs/download.php/10163/mricrogl_linux.zip
