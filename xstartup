@@ -1,0 +1,22 @@
+#!/bin/bash
+
+#should I do this on startvnc?
+vglclient &
+
+XFCE_PANEL_MIGRATE_DEFAULT=true startxfce4 &
+
+#cat << EOF > script
+#BEGIN
+#    LOADIMAGE('$(find $INPUT_DIR -name "*.nii.gz")')
+#END.
+#EOF
+cp fib.gz /tmp/data.fib.gz
+vglrun dsi_studio /tmp/data.fib.gz &
+pid=$!
+echo $pid > /pid
+
+#maximize!
+sleep 4
+id=`wmctrl -pl | grep " $pid " | cut -f 1 -d " "`
+wmctrl -i -r $id -b add,fullscreen
+
